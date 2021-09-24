@@ -1,4 +1,13 @@
 .main {
-  background-image: url("paper.jpg");
-  background-color: chartreuse;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: whitesmoke;
+  background-image: url("../../../public/images/paperWhite.jpg");
 }
+
+// .mainDark {
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+//   background-color: black;
+//   background-image: url("../../../public/images/paperBlack.jpg");
+// }

@@ -221,6 +221,22 @@ const Nav = () => {
               </li>
             );
           })}
+          <li>
+            <button
+              onClick={() => {
+                let theme = parseInt(localStorage.getItem('theme'));
+                theme += 1;
+                localStorage.setItem('theme', theme);
+                console.log(theme);
+                let target = document.querySelector('main');
+                console.log(target);
+                target.classList.add('mainDark');
+                target.classList.remove('Main_main__1C8Mz');
+              }}
+            >
+              Dark Mode
+            </button>
+          </li>
         </ul>
         <div className={styles.navSearch}>
           {searchVisibility === SEARCH_HIDDEN && (
