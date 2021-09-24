@@ -221,7 +221,7 @@ const Nav = () => {
               </li>
             );
           })}
-          <li>
+          {/* <li>
             <button
               onClick={() => {
                 let theme = parseInt(localStorage.getItem('theme'));
@@ -236,7 +236,7 @@ const Nav = () => {
             >
               Dark Mode
             </button>
-          </li>
+          </li> */}
         </ul>
         <div className={styles.navSearch}>
           {searchVisibility === SEARCH_HIDDEN && (
