@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { FaSearch } from 'react-icons/fa';
-
 import useSite from 'hooks/use-site';
 import useSearch, { SEARCH_STATE_LOADED } from 'hooks/use-search';
 import { postPathBySlug } from 'lib/posts';
@@ -21,6 +20,7 @@ const Nav = () => {
 
   const { metadata = {}, menus } = useSite();
   const { title } = metadata;
+  console.log(title);
 
   const navigation = findMenuByLocation(menus, [
     process.env.WORDPRESS_MENU_LOCATION_NAVIGATION,
@@ -180,9 +180,13 @@ const Nav = () => {
       <Section className={styles.navSection}>
         <p className={styles.navName}>
           <Link href="/">
-            <a>{title}</a>
+            <a className="logo">
+              {/* {title}  */}
+              <img src="../../../images/csLogo.png" alt="Coveted Logo"></img>
+            </a>
           </Link>
         </p>
+        {/* <p>Creating Beautiful Web Design</p> */}
         <ul className={styles.navMenu}>
           {navigation?.map(({ id, path, label, title, target, children }) => {
             return (
